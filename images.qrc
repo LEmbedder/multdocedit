@@ -12,5 +12,6 @@
         <file>images/exit.png</file>
         <file>images/gtk-close.png</file>
         <file>images/help.png</file>
+        <file>images/myico.ico</file>
     </qresource>
 </RCC>

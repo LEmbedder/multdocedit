@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>632</width>
-    <height>451</height>
+    <width>754</width>
+    <height>502</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QTextEdit" name="textEdit"/>
+     <widget class="QMdiArea" name="mdiArea"/>
     </item>
    </layout>
   </widget>
@@ -31,7 +31,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>632</width>
+     <width>754</width>
      <height>26</height>
     </rect>
    </property>
@@ -39,14 +39,14 @@
     <property name="title">
      <string>文件</string>
     </property>
-    <addaction name="action_2"/>
-    <addaction name="action_3"/>
-    <addaction name="action_4"/>
+    <addaction name="action_new"/>
+    <addaction name="action_open"/>
+    <addaction name="action_close"/>
     <addaction name="separator"/>
-    <addaction name="action_6"/>
-    <addaction name="action_7"/>
+    <addaction name="action_save"/>
+    <addaction name="action_saveas"/>
     <addaction name="separator"/>
-    <addaction name="action_9"/>
+    <addaction name="action_exit"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
@@ -59,18 +59,34 @@
     <addaction name="action_11"/>
     <addaction name="separator"/>
     <addaction name="action_13"/>
+    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menu_3">
     <property name="title">
      <string>帮助</string>
     </property>
-    <addaction name="action_14"/>
+    <addaction name="action_help"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
    <addaction name="menu_3"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
@@ -78,9 +94,9 @@
     <bool>false</bool>
    </attribute>
    <addaction name="separator"/>
-   <addaction name="action_2"/>
-   <addaction name="action_3"/>
-   <addaction name="action_6"/>
+   <addaction name="action_new"/>
+   <addaction name="action_open"/>
+   <addaction name="action_save"/>
    <addaction name="separator"/>
    <addaction name="action"/>
    <addaction name="action_8"/>
@@ -90,7 +106,7 @@
    <addaction name="action_13"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="action_2">
+  <action name="action_new">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/images/document-new.png</normaloff>:/images/images/document-new.png</iconset>
@@ -99,7 +115,7 @@
     <string>新建</string>
    </property>
   </action>
-  <action name="action_3">
+  <action name="action_open">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/images/document-open.png</normaloff>:/images/images/document-open.png</iconset>
@@ -107,8 +123,11 @@
    <property name="text">
     <string>打开</string>
    </property>
+   <property name="shortcut">
+    <string>Alt+F</string>
+   </property>
   </action>
-  <action name="action_4">
+  <action name="action_close">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/images/gtk-close.png</normaloff>:/images/images/gtk-close.png</iconset>
@@ -117,7 +136,7 @@
     <string>关闭</string>
    </property>
   </action>
-  <action name="action_6">
+  <action name="action_save">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/images/document-save.png</normaloff>:/images/images/document-save.png</iconset>
@@ -126,7 +145,7 @@
     <string>保存</string>
    </property>
   </action>
-  <action name="action_7">
+  <action name="action_saveas">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/images/document-save-as.png</normaloff>:/images/images/document-save-as.png</iconset>
@@ -135,7 +154,7 @@
     <string>另存为</string>
    </property>
   </action>
-  <action name="action_9">
+  <action name="action_exit">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/images/exit.png</normaloff>:/images/images/exit.png</iconset>
@@ -189,7 +208,7 @@
     <string>查找</string>
    </property>
   </action>
-  <action name="action_14">
+  <action name="action_help">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/images/help.png</normaloff>:/images/images/help.png</iconset>

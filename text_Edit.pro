@@ -24,11 +24,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    dockwidget.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    dockwidget.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    dockwidget.ui
 
 RESOURCES += \
     images.qrc
+
+
+RC_ICONS = myico.ico
